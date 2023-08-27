@@ -1,0 +1,291 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+
+:root{
+--Red: hsl(0, 78%, 62%);
+--Cyan: hsl(180, 100%, 50%);
+--Orange: hsl(34, 97%, 64%);
+--Blue: hsl(212, 86%, 64%);
+--VeryDarkBlue: hsl(234, 12%, 34%);
+--GrayishBlue: hsl(229, 6%, 66%);
+--VeryLightGray: hsl(0, 0%, 98%);
+
+}
+
+/*
+@font-face {
+    font-family: 'MyParagraphFont';
+    src: url('fonts/Roboto.woff2') format('woff2'),
+         url('fonts/Roboto.woff') format('woff'),
+         url('fonts/Roboto.ttf') format('truetype');
+  } */
+  
+body{
+    font-family: 'Poppins', sans-serif;;
+    font-size: 15px;
+    display: flex;
+    min-height: 50vh;
+    justify-content: center;
+    align-items: center;
+    background: var(--VeryLightGray);
+   
+
+
+}
+
+#container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Start header*/
+.header{
+    padding-left: 0rem;
+    padding-right: 0rem;
+    padding-top: 85px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.header h1{
+    color: var(--GrayishBlue);
+    font-weight: 400;
+}
+
+.header h2{
+    color: var(--VeryDarkBlue);
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.header p{
+   padding-top: 15px;
+   color: var(--GrayishBlue);
+}
+/*End header*/
+
+
+/*Start card design*/
+.card{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.card p{
+    color: var(--GrayishBlue);
+    padding: 0.5rem 2rem;
+    font-size: 0.8rem;
+}
+
+.card h3{
+    color: var(--VeryDarkBlue);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1.4rem;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.icon img{
+    padding-left: 15rem;
+    padding-top: 3.5rem;
+    width: 93%;
+}
+
+
+.supervisor{
+    height: 15.5rem;
+    width: 22rem;
+    background: white;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    border-top: 4px solid var(--Cyan);
+   
+}
+
+
+.calculator{
+    background: white;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    height: 15.5rem;
+    width: 22rem;
+    border-top: 4px solid var(--Blue);
+}
+
+
+.team{
+    background: white;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    height: 15.5rem;
+    width: 22rem;
+    border-top: 4px solid var(--Red);
+   
+}
+
+
+.karma{
+    background: white;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    height: 15.5rem;
+    width: 22rem;
+    border-top: 4px solid var(--Orange);
+   
+}
+/*End card design */
+
+
+/* Start responsive design */
+@media (min-width: 375px) {
+    #container {
+        width: 340px;
+    }
+
+    .card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: row wrap;
+        gap: 2rem;
+    }
+}
+
+
+@media (max-width: 280px){
+
+    #container {
+        width: 250px;
+    }
+
+    .card {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        row-gap: 1rem; 
+        margin-left: -10px;
+    }
+
+
+    .team, .karma, .calculator, .supervisor {
+        width: 15rem;
+        height: 12rem;
+    }
+
+
+    .icon img{
+        padding-left: 10rem;
+        padding-bottom: 1.5rem;
+        padding-top: 0;
+        width: 90%;
+    }
+    
+
+
+}
+
+
+
+@media (min-width: 576px){
+    #container {
+        width: 540px;
+    }
+
+}
+
+
+@media (min-width: 768px){
+    #container {
+        width: 720px;
+    }
+
+    .card{
+        display: grid;
+        grid-template: repeat(2, 15fr) / repeat(2, 20fr);
+        gap: 2rem;
+        justify-content: center;
+
+    }
+
+
+    .icon img{
+        padding-left: 15rem;
+        padding-top: 3.5rem;
+        width: 85%;
+    }
+}
+
+
+@media (min-width: 992px){
+    #container {
+        width: 960x;
+    }
+}
+
+
+@media (min-width: 1200px){
+
+    .header h1{
+        font-size: 30px;
+    }
+
+
+    .header h2{
+        font-size: 30px;
+    }
+
+    .header p{
+        font-size: 18px;
+        padding: 2% 22%;
+    }
+
+
+    #container {
+        width: 1180px;
+    }
+
+    .card
+        {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            gap: 2rem;
+            
+    
+        }
+
+        .icon img{
+            padding-left: 15rem;
+            padding-top: 3.5rem;
+            width: 85%;
+        }
+
+
+.down{
+    transform: translateY(50%);
+}
+
+
+}
+
+
+@media (min-width: 1440px){
+    #container {
+        width: 1320px;
+    }
+
+}
+
+/* End responsive */
+
